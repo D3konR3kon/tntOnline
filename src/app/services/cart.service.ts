@@ -4,6 +4,7 @@ import { Product } from '../product';
   providedIn: 'root'
 })
 export class CartService {
+  quant: any;
   items: Product[] = [];
   totalAmount = 0
   orderItems = ""
@@ -17,7 +18,8 @@ export class CartService {
    return;
   }
   productExistInCart.qty! += 1;
-
+  this.quant! = productExistInCart.qty;
+  console.log(this.quant);
   }
 
   getItems(): Product[] {
