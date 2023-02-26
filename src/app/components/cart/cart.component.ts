@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../product';
 import { CartService } from '../../services/cart.service';
-import { Router, ActivatedRoute } from '@angular/router';
+
 import { Location } from '@angular/common';
-import { CheckoutComponent } from '../../components/checkout/checkout.component'
+//import { CheckoutComponent } from '../../components/checkout/checkout.component'
 import { TokenStorageService } from 'src/app/services/token-storage.service';
+//import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -19,12 +20,10 @@ export class CartComponent implements OnInit {
   total:any
   items: any
   products: any[] = []
-  totalAmount = this.cartService.totalAmount
+  totalAmount = this.cartService.totalAmount;
   orderItems = this.cartService.orderItems
   
   constructor(private cartService: CartService, 
-    private router : Router, 
-    private activated: ActivatedRoute,
     private location: Location,
     private tokenStorage: TokenStorageService) { }
 
