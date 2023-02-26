@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Shop } from '../shop';
 
-const baseUrl = 'https://tnt_B.vercel.app/api/shops'
+const baseUrl = 'https://tnt-backend.vercel.app/api/shops'
 
 
 
