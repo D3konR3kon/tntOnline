@@ -68,19 +68,27 @@ section{
     line-height: 60px;
     padding-right:2rem;
   }
-  .search { 
-  position: relative; 
-  margin: 0 auto ;
-  text-align: center;
+  .search{
+    border: 1px solid lightblue;
+    border-radius: 10px;
   }
-  
-  
-  
-  .search .bi-search { 
-
+  .search:hover{
+    /* box-shadow:rgba(100, 123, 168, 0.53); */
+  }
+  .bi-search{
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-weight: bold;
   }
   .form-control{
-  border:inherit;
+  border:none;
+  background-color: transparent;
+  font-size: 14px;
+  margin-left: 0;
+  }
+  .form-control:focus{
+    outline: none;
+    box-shadow: none;
   }
 
   .btn-sm{

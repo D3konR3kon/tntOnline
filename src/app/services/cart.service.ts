@@ -4,21 +4,21 @@ import { Product } from '../product';
   providedIn: 'root'
 })
 export class CartService {
-  quant: any;
+  quant: number = 0;
   items: Product[] = [];
-  totalAmount = 0
-  orderItems = ""
+  totalAmount = 0;
+  orderItems = "";
   constructor() { }
   addToCart(product: Product) {
       
-    const productExistInCart = this.items.find(({name}) => name === product.name); // find product by name
- if (!productExistInCart) {
+   const productExistInCart = this.items.find(({name}) => name === product.name); // find product by name
+   if (!productExistInCart) {
    this.items.push({...product}); // enhance "porduct" opject with "num" property
-   this.items.length
+   this.items.length;
    return;
   }
   productExistInCart.qty! += 1;
-  this.quant! = productExistInCart.qty;
+  this.quant++;
   console.log(this.quant);
   }
 

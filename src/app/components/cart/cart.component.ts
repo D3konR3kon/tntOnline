@@ -12,8 +12,8 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  isLoggedIn = false
-  username = ""
+  isLoggedIn = false;
+  username = "";
   product !: Product
   totalItems :any
   total:any
